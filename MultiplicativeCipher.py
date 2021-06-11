@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 Simple file that can encode or decode a string using a Multiplicative cipher technique
-Makes use of the English alphabet, sSo A = 0, Z = 25
+Makes use of the English alphabet, so A = 0, Z = 25
 """
 
 __author__ = "ScottishGuy95"
 __license__ = "MIT"
 
+# Imports
 import math
 
 
@@ -23,7 +24,6 @@ def getKey(num, alphabet):
             return k
 
 
-# TODO: Separate the code so that this function works letter by letter, allows original capitalisation to be kept
 def multiplicative(key, text, direction):
     """
     Used to return an encoded or decoded string of text using a multiplicative cipher
