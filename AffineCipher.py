@@ -111,7 +111,6 @@ while True:
 # Pass each letter from the user to the cipher and return the results
 # This allows the original capitalisation of each letter in the given text to be kept or reset per users request
 for ltr in text:
-    print(ltr)
     if ltr.isalpha():
         # Encrypt or decode the given letter
         result_ltr = affine(int(key_a), int(key_b), ltr, request)
