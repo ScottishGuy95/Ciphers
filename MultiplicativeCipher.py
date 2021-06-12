@@ -39,14 +39,13 @@ def multiplicative(key, text, direction):
                 'X': 23, 'Y': 24, 'Z': 25}
     value = key
     result = ""
-    for x in range(len(text)):                          # Loop through the given text, checking for letters
-        # Decode by setting the using the original key to calculate the multiplicative inverse of the key
-        # The use that value to return the ciphertext to the plaintext alternative
-        # Otherwise encode using the key value to create the ciphertext
-        if direction == "decode":
-            value = pow(key, -1, len(alphabet))
-        letter = (alphabet.get(text[x].upper()) * value) % len(alphabet)
-        result += getKey(letter, alphabet)          # Gets the value responding to the given letter in the alphabet
+    # Decode by setting the using the original key to calculate the multiplicative inverse of the key
+    # The use that value to return the ciphertext to the plaintext alternative
+    # Otherwise encode using the key value to create the ciphertext
+    if direction == "decode":
+        value = pow(key, -1, len(alphabet))
+    letter = (alphabet.get(text.upper()) * value) % len(alphabet)
+    result += getKey(letter, alphabet)          # Gets the value responding to the given letter in the alphabet
     return result
 
 
